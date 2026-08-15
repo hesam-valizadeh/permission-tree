@@ -1,0 +1,31 @@
+
+<div class="tree-wrapper">
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchText"
+      (ngModelChange)="onSearch($event)"
+      placeholder="جستجو در دسترسی‌ها..."
+      class="search-input"
+    />
+    @if (service.searching()) {
+      <span class="searching-badge">در حال جستجو...</span>
+    }
+  </div>
+
+  <div class="info-bar">
+    <span>انتخاب‌شده‌ها: {{ service.selectedIds().join(', ') || 'هیچ' }}</span>
+    <span class="count">({{ service.selectedIds().length }} مورد)</span>
+  </div>
+
+  <div class="tree-view">
+    <ul class="tree-root">
+      @for (node of service.displayTree(); track node.id) {
+        <app-permission-node [node]="node" [level]="0" (toggle)="onToggle($event)" />
+      } @empty {
+        <div class="empty-state">موردی یافت نشد</div>
+      }
+    </ul>
+  </div>
+</div>
+

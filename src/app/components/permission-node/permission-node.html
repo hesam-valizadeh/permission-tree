@@ -1,0 +1,31 @@
+<li class="tree-node">
+  <div class="node-row">
+    @if (hasChildren()) {
+      <button type="button" class="toggle-btn" (click)="toggleExpand()">
+        {{ expanded() ? '▼' : '▶' }}
+      </button>
+    } @else {
+      <span class="toggle-placeholder"></span>
+    }
+
+    <label class="node-label">
+      <input
+        type="checkbox"
+        [checked]="node().selected"
+        [indeterminate]="node().indeterminate || false"
+        (change)="onChange($event)"
+      />
+      <span class="title" [class.indeterminate-active]="node().indeterminate">
+        {{ node().title }}
+      </span>
+    </label>
+  </div>
+
+  @if (hasChildren() && expanded()) {
+    <ul class="tree-children">
+      @for (child of node().children; track child.id) {
+        <app-permission-node [node]="child" [level]="level() + 1" (toggle)="toggle.emit($event)" />
+      }
+    </ul>
+  }
+</li>

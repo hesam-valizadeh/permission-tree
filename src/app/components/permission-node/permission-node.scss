@@ -1,0 +1,103 @@
+:host {
+  display: list-item;
+}
+
+.tree-node {
+  position: relative;
+  padding-right: 24px;
+  list-style: none;
+}
+
+.tree-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 8px;
+  width: 2px;
+  height: 100%;
+  background: #d1d5db;
+  border-radius: 1px;
+}
+
+:host(:last-child) > .tree-node::before {
+  height: 22px;
+}
+
+.tree-node::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  width: 16px;
+  height: 2px;
+  background: #d1d5db;
+  border-radius: 1px;
+}
+
+.node-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.toggle-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.toggle-btn:hover {
+  background: #e5e7eb;
+}
+
+.toggle-placeholder {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+}
+
+.node-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.title {
+  font-size: 14px;
+  color: #1f2937;
+  transition: color 0.15s;
+}
+.title:hover {
+  color: #2563eb;
+}
+
+.indeterminate-active {
+  color: #4b5563;
+  font-style: italic;
+}
+
+.tree-children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
