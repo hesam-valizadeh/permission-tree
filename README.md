@@ -77,7 +77,6 @@ open http://localhost:4200
 │   │   │       └── 📄 permission-node.model.ts
 │   │   └── 📁 services
 │   │       ├── 📄 mock-permission-api.service.ts
-│   │       ├── 📄 permission-search.service.ts
 │   │       └── 📄 permission-tree.service.ts
 │   ├── 📁 @layout
 │   ├── 📁 @shared

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PermissionNodeComponent } from '../permission-node/permission-node';
-import { PermissionService } from '../../@core/services/permission-tree.service';
+import { PermissionService } from '../../@core/services/permission.service';
 import { MOCK_PERMISSIONS } from '../../@core/mocks/permissions.mock';
 
 @Component({
