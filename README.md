@@ -70,33 +70,17 @@ open http://localhost:4200
 ```
 ├── 📁 app
 │   ├── 📁 @core
-│   │   ├── 📁 constants
-│   │   ├── 📁 guards
-│   │   ├── 📁 helpers
-│   │   ├── 📁 interceptors
-│   │   ├── 📁 mappers
 │   │   ├── 📁 mocks
 │   │   │   └── 📄 permissions.mock.ts
 │   │   ├── 📁 models
-│   │   │   ├── 📁 base-classes
-│   │   │   ├── 📁 enums
-│   │   │   ├── 📁 interfaces
-│   │   │   │   └── 📄 permission-node.model.ts
-│   │   │   └── 📁 types
-│   │   ├── 📁 services
-│   │   │   ├── 📄 mock-permission-api.service.ts
-│   │   │   ├── 📄 permission-search.service.ts
-│   │   │   └── 📄 permission-tree.service.ts
-│   │   ├── 📁 state
-│   │   └── 📁 utils
+│   │   │   └── 📁 interfaces
+│   │   │       └── 📄 permission-node.model.ts
+│   │   └── 📁 services
+│   │       ├── 📄 mock-permission-api.service.ts
+│   │       ├── 📄 permission-search.service.ts
+│   │       └── 📄 permission-tree.service.ts
 │   ├── 📁 @layout
-│   │   ├── 📁 footer
-│   │   └── 📁 header
 │   ├── 📁 @shared
-│   │   ├── 📁 components
-│   │   ├── 📁 directives
-│   │   ├── 📁 pipes
-│   │   └── 📁 validators
 │   ├── 📁 components
 │   │   ├── 📁 permission-node
 │   │   │   ├── 🌐 permission-node.html
